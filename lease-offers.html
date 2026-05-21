@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse the latest car lease offers in Los Angeles. Find the best deals on new and used vehicles with flexible leasing options." />
+    <meta
+      name="keywords"
+      content="car lease offers LA, lease deals Los Angeles, car leasing deals California" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="img/favicon32x32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="img/favicon16x16.png" type="image/png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" sizes="180x180" />
+    <title>LA Autostore | Lease Offers</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/output.css" />
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/lease-offers.js"></script>
+  </head>
+  <body class="bg-white text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-[#0f0f0f]/95 backdrop-blur-md border-b border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center logo_container">
+            <a href="index.html" class="flex items-baseline">
+              <img src="img/logo_autostore.webp" alt="logo" class="h-8 w-auto" />
+            </a>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div>
+            <div class="hidden lg:block header-top__bar_container">
+              <div class="max-w-7xl mx-auto flex justify-center items-center text-base">
+                <div class="flex items-center gap-6">
+                  <a
+                    href="tel:+14242306042"
+                    class="flex items-center gap-2 text-gray-300 hover:text-white transition">
+                    <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                    <span>(424) 230-6042</span>
+                  </a>
+                  <a
+                    href="mailto:sales@laautostore.net"
+                    class="flex items-center gap-2 text-gray-300 hover:text-white transition">
+                    <i data-lucide="mail" class="w-4 h-4 text-primary"></i>
+                    <span>sales@laautostore.net</span>
+                  </a>
+                  <div class="flex items-center gap-2 text-gray-300">
+                    <i data-lucide="clock" class="w-4 h-4 text-primary"></i>
+                    <span>Mon - Fri: 9:00 - 17:00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <nav
+              class="hidden md:flex justify-center items-center gap-4 header-bottom__bar_container">
+              <a
+                href="lease-offers.html"
+                class="text-base font-medium tracking-wide text-gray-300 hover:text-[var(--primary-hover)] transition uppercase"
+                >Lease Offers
+              </a>
+              <a
+                href="creditapp.html"
+                class="text-base font-medium tracking-wide text-gray-300 hover:text-[var(--primary-hover)] transition uppercase"
+                >Credit Application
+              </a>
+              <a
+                href="services.html"
+                class="text-base font-medium tracking-wide text-gray-300 hover:text-[var(--primary-hover)] transition uppercase"
+                >Services
+              </a>
+              <a
+                href="advantages.html"
+                class="text-base font-medium tracking-wide text-gray-300 hover:text-[var(--primary-hover)] transition uppercase"
+                >Advantages
+              </a>
+              <a
+                href="aboutUs.html"
+                class="text-base font-medium tracking-wide text-gray-300 hover:text-[var(--primary-hover)] transition uppercase"
+                >About Us
+              </a>
+              <a
+                href="#contacts"
+                class="text-base font-medium tracking-wide text-gray-300 hover:text-[var(--primary-hover)] transition uppercase"
+                >Contacts
+              </a>
+            </nav>
+          </div>
+
+          <!-- CTA Button -->
+          <div class="hidden md:block">
+            <button id="open-modal" class="btn-order">Order</button>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-dark-secondary border-t border-gray-800">
+        <div class="px-4 pt-2 pb-4 space-y-1">
+          <a
+            href="lease-offers.html"
+            class="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800"
+            >Lease Offers</a
+          >
+          <a
+            href="creditapp.html"
+            class="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800"
+            >Credit Application</a
+          >
+          <a
+            href="services.html"
+            class="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800"
+            >Services</a
+          >
+          <a
+            href="advantages.html"
+            class="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800"
+            >Advantages</a
+          >
+          <a
+            href="aboutUs.html"
+            class="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800"
+            >About Us</a
+          >
+          <a
+            href="#contacts"
+            class="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800"
+            >Contacts</a
+          >
+          <button
+            type="button"
+            id="open-modal-mobile"
+            class="block px-3 py-2 text-sm text-white bg-primary mt-4 text-center w-full">
+            Order Now
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-dark text-white" id="lease">
+      <!-- IMAGE BLOCK -->
+      <div class="relative h-[53vh] min-h-[500px] overflow-hidden">
+        <img
+          src="img/leasing.webp"
+          alt="lease-img"
+          class="absolute inset-0 w-full h-full object-cover object-[center_86%]" />
+
+        <!-- Dark overlay -->
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <!-- Title on image -->
+        <div class="absolute inset-0 z-10 flex items-start">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-10">
+            <!-- Breadcrumb -->
+            <div class="text-xs text-gray-400 mb-3">
+              <a href="index.html" class="hover:text-[var(--primary-hover)] transition">Home</a>
+              <span class="mx-2 text-primary">/</span>
+              <span class="text-white">Lease Offers</span>
+            </div>
+
+            <h1 class="text-5xl md:text-5xl font-montserrat tracking-wide font-bold">
+              <span class="inline-block">Lease Offers</span>
+            </h1>
+
+            <div class="w-16 h-[2px] bg-primary mt-4"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search Box -->
+      <section class="search-section triangles-down w-full backdrop-blur-sm py-6 relative">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="relative">
+              <label class="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Brand</label>
+              <select
+                id="brand-select"
+                class="w-full bg-dark-secondary border border-gray-700 text-white px-4 py-2.5 text-sm focus:outline-none focus:border-primary transition">
+                <option value="" selected>Select brand</option>
+              </select>
+            </div>
+            <div class="relative">
+              <label class="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Model</label>
+              <select
+                id="model-select"
+                class="w-full bg-dark-secondary border border-gray-700 text-white px-4 py-2.5 text-sm focus:outline-none focus:border-primary transition">
+                <option value="" selected>Choose a model</option>
+              </select>
+            </div>
+            <div class="relative">
+              <label class="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Year</label>
+              <select
+                id="year-select"
+                class="w-full bg-dark-secondary border border-gray-700 text-white px-4 py-2.5 text-sm focus:outline-none focus:border-primary transition">
+                <option value="" selected>Year of model</option>
+              </select>
+            </div>
+          </div>
+          <div class="mt-6 flex justify-center">
+            <button
+              id="search-cars-btn"
+              class="bg-primary text-white px-8 py-3 text-sm font-medium uppercase tracking-wider hover:bg-primary-hover transition flex items-center gap-2">
+              <i data-lucide="search" class="w-4 h-4"></i>
+              Search Cars
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTENT BLOCK -->
+      <section class="py-14 px-4 bg-white" id="catalog-content_section">
+        <div class="max-w-7xl mx-auto">
+          <!-- Header -->
+          <div class="mb-10 text-center">
+            <h3 class="text-4xl font-montserrat font-bold text-black mb-2">Featured Lease Deals</h3>
+            <p class="text-xs text-gray-400">Discover vehicles available for leasing.</p>
+          </div>
+
+          <!-- Catalog Controls -->
+          <div
+            class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8 catalog-controls">
+            <!-- Results count -->
+            <div class="text-sm text-gray-500">
+              Showing <span id="cars-count" class="font-semibold text-black">0</span>
+              <span id="vehicle-word">vehicles</span>
+            </div>
+
+            <!-- Sorting -->
+            <div class="flex items-center gap-3">
+              <span class="text-xs uppercase tracking-wider text-gray-400"> Sort by </span>
+
+              <div class="relative w-48">
+                <select
+                  id="sort-select"
+                  class="w-full bg-white text-black border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-primary cursor-pointer">
+                  <option value="" selected>Select...</option>
+                  <option value="newest">Newest</option>
+                  <option value="price-desc">Price ↓</option>
+                  <option value="price-asc">Price ↑</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car Grid -->
+          <div id="catalog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- <a href="item.html?id=1" class="block catalog-item">
+              <div
+                class="car-card bg-dark-secondary overflow-hidden group cursor-pointer">
+                <div class="car-image relative overflow-hidden aspect-[4/3]">
+                  <img src="img/offers/Car.webp" class="w-full h-full object-cover" />
+                </div>
+
+                <div class="p-4 border border-gray-800 border-t-0">
+                  <div class="flex justify-between items-start mb-2">
+                    <div>
+                      <h4 class="text-sm font-medium text-white">Audi Q8 e-tron</h4>
+                      <p class="text-xs text-gray-500">Sportback 55 quattro</p>
+                    </div>
+                    <span class="text-primary font-montserrat font-bold">$82,000</span>
+                  </div>
+
+                  <div class="flex items-center gap-3 text-xs text-gray-400 mt-3">
+                    <span>2023</span>
+                    <span class="w-1 h-1 bg-gray-600 rounded-full"></span>
+                    <span>34,500 km</span>
+                  </div>
+                </div>
+              </div>
+            </a> -->
+          </div>
+          <!-- Pagination -->
+          <div id="pagination" class="flex justify-center gap-2 mt-10"></div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacts" class="relative py-16 px-4 bg-dark overflow-hidden">
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0 opacity-80">
+        <img
+          src="img/contacts-img.webp"
+          alt="contact-section-background"
+          class="w-full h-full object-cover" />
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-b from-dark via-dark/95 to-dark z-0"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 gap-12 max-w-[1280px] mx-auto">
+          <!-- Contact Info -->
+          <div class="reveal contant-info_container">
+            <div class="flex flex-col sm:flex-row gap-8 mb-8">
+              <div class="accent-line-1 pl-6">
+                <h3 class="text-lg font-montserrat font-bold text-white mb-1">Address</h3>
+                <p class="text-xs text-gray-400">
+                  21146 Ventura Blvd suite 3<br />
+                  Woodland Hills, CA 91364
+                </p>
+              </div>
+              <div class="flex-1">
+                <div class="accent-line pl-6 pb-1 mb-4">
+                  <h3 class="text-lg font-montserrat font-bold text-white">Contacts</h3>
+                  <p class="text-xs text-gray-400">(424) 230-6042<br />sales@laautostore.net</p>
+                </div>
+                <button
+                  id="open-modal-2"
+                  class="bg-primary text-white px-6 py-2 text-xs font-medium uppercase tracking-wider hover:bg-primary-hover transition mt-2">
+                  Write to Us
+                </button>
+              </div>
+            </div>
+
+            <!-- Team Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Team Member 1 -->
+              <div
+                class="team-card bg-dark-secondary border border-gray-800 p-4 hover:border-primary transition-all">
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10">
+                    <i data-lucide="briefcase" class="w-5 h-5 text-primary"></i>
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="text-sm font-medium text-white">Levon</h4>
+                    <p class="text-xs text-gray-500 mb-3">Chief Executive Officer</p>
+
+                    <div class="space-y-1">
+                      <div class="flex items-center gap-2 text-xs text-gray-400">
+                        <i data-lucide="phone" class="w-3 h-3 text-primary"></i>
+                        <span>(424) 230-6042</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-xs text-gray-400">
+                        <i data-lucide="mail" class="w-3 h-3 text-primary"></i>
+                        <span>sales@laautostore.net</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Team Member 2 -->
+              <div
+                class="team-card bg-dark-secondary border border-gray-800 p-4 hover:border-primary transition-all">
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10">
+                    <i data-lucide="handshake" class="w-5 h-5 text-primary"></i>
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="text-sm font-medium text-white">Nick</h4>
+                    <p class="text-xs text-gray-500 mb-3">Sales Associate</p>
+
+                    <div class="space-y-1">
+                      <div class="flex items-center gap-2 text-xs text-gray-400">
+                        <i data-lucide="phone" class="w-3 h-3 text-primary"></i>
+                        <span>(424) 230-6042</span>
+                      </div>
+                      <div class="flex items-center gap-2 text-xs text-gray-400">
+                        <i data-lucide="mail" class="w-3 h-3 text-primary"></i>
+                        <span>nick@laautostore.net</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Google Maps Placeholder -->
+          <div class="contact-section-map_container">
+            <div
+              class="group reveal delay-200 relative w-[28rem] min-h-[400px] border border-gray-800 rounded-lg">
+              <!-- Google Map -->
+              <iframe
+                src="https://www.google.com/maps?q=LA+AUTOSTORE,+21146+Ventura+Blvd+Suite+3,+Woodland+Hills,+CA+91364,+United+States&output=embed"
+                class="absolute inset-0 w-full h-full"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+              <!-- Dark overlay -->
+              <div
+                class="absolute inset-0 bg-black/40 pointer-events-none transition-opacity duration-300 group-hover:opacity-0"></div>
+            </div>
+            <!-- Button -->
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=LA+AUTOSTORE,+21146+Ventura+Blvd+Suite+3,+Woodland+Hills,+CA+91364"
+              target="_blank"
+              class="mt-4 bg-primary text-white px-6 py-2 text-xs uppercase tracking-wider hover:bg-primary-hover transition inline-flex items-center gap-2 rounded">
+              <span>Get Directions</span> <i data-lucide="arrow-right" class="w-3 h-3"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark border-t border-gray-800 py-8 px-4 footer_main">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center logo_container">
+            <a href="index.html" class="flex items-baseline">
+              <img src="img/logo_autostore.webp" alt="logo" class="h-8 w-auto" />
+            </a>
+          </div>
+
+          <!-- Nav -->
+          <div
+            class="flex gap-6 text-xs text-gray-300 uppercase tracking-wider footer-nav_container">
+            <a href="lease-offers.html" class="hover:text-[var(--primary-hover)] transition">
+              Lease Offers
+            </a>
+            <a href="creditapp.html" class="hover:text-[var(--primary-hover)] transition">
+              Credit Application
+            </a>
+            <a href="services.html" class="hover:text-[var(--primary-hover)] transition">
+              Services
+            </a>
+            <a href="advantages.html" class="hover:text-[var(--primary-hover)] transition">
+              Advantages
+            </a>
+            <a href="aboutUs.html" class="hover:text-[var(--primary-hover)] transition">About us</a>
+            <a href="#contacts" class="hover:text-[var(--primary-hover)] transition">Contacts</a>
+            <a href="privacy.html" class="hover:text-[var(--primary-hover)] transition">
+              Privacy Policy
+            </a>
+            <a href="terms.html" class="hover:text-[var(--primary-hover)] transition">
+              Terms of Service
+            </a>
+          </div>
+
+          <!-- Social -->
+          <div class="flex gap-4">
+            <a
+              href="https://www.facebook.com/laautostore/"
+              class="w-8 h-8 border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary hover:bg-primary transition rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640"
+                class="w-5 h-5 fill-current">
+                <path
+                  d="M240 363.3L240 576L356 576L356 363.3L442.5 363.3L460.5 265.5L356 265.5L356 230.9C356 179.2 376.3 159.4 428.7 159.4C445 159.4 458.1 159.8 465.7 160.6L465.7 71.9C451.4 68 416.4 64 396.2 64C289.3 64 240 114.5 240 223.4L240 265.5L174 265.5L174 363.3L240 363.3z" />
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/la_auto_store/"
+              class="w-8 h-8 border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary hover:bg-primary transition rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640"
+                class="w-5 h-5 fill-current">
+                <path
+                  d="M320.3 205C256.8 204.8 205.2 256.2 205 319.7C204.8 383.2 256.2 434.8 319.7 435C383.2 435.2 434.8 383.8 435 320.3C435.2 256.8 383.8 205.2 320.3 205zM319.7 245.4C360.9 245.2 394.4 278.5 394.6 319.7C394.8 360.9 361.5 394.4 320.3 394.6C279.1 394.8 245.6 361.5 245.4 320.3C245.2 279.1 278.5 245.6 319.7 245.4zM413.1 200.3C413.1 185.5 425.1 173.5 439.9 173.5C454.7 173.5 466.7 185.5 466.7 200.3C466.7 215.1 454.7 227.1 439.9 227.1C425.1 227.1 413.1 215.1 413.1 200.3zM542.8 227.5C541.1 191.6 532.9 159.8 506.6 133.6C480.4 107.4 448.6 99.2 412.7 97.4C375.7 95.3 264.8 95.3 227.8 97.4C192 99.1 160.2 107.3 133.9 133.5C107.6 159.7 99.5 191.5 97.7 227.4C95.6 264.4 95.6 375.3 97.7 412.3C99.4 448.2 107.6 480 133.9 506.2C160.2 532.4 191.9 540.6 227.8 542.4C264.8 544.5 375.7 544.5 412.7 542.4C448.6 540.7 480.4 532.5 506.6 506.2C532.8 480 541 448.2 542.8 412.3C544.9 375.3 544.9 264.5 542.8 227.5zM495 452C487.2 471.6 472.1 486.7 452.4 494.6C422.9 506.3 352.9 503.6 320.3 503.6C287.7 503.6 217.6 506.2 188.2 494.6C168.6 486.8 153.5 471.7 145.6 452C133.9 422.5 136.6 352.5 136.6 319.9C136.6 287.3 134 217.2 145.6 187.8C153.4 168.2 168.5 153.1 188.2 145.2C217.7 133.5 287.7 136.2 320.3 136.2C352.9 136.2 423 133.6 452.4 145.2C472 153 487.1 168.1 495 187.8C506.7 217.3 504 287.3 504 319.9C504 352.5 506.7 422.6 495 452z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-6 text-center">
+          <p class="text-xs text-gray-500">© 2026 LA Autostore. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal Get in Touch -->
+    <div id="contact-modal" class="modal hidden">
+      <div class="modal-overlay"></div>
+
+      <div class="modal-content">
+        <div
+          class="bg-dark-secondary border border-gray-800 p-6 md:p-8 rounded-xl relative max-w-3xl mx-auto">
+          <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+            ✕
+          </button>
+
+          <h3 class="text-xl font-semibold text-white mb-6">Contact Us</h3>
+
+          <p class="text-gray-400 text-sm mb-6">
+            Have questions or need assistance? Fill out the form and our team will get back to you
+            shortly.
+          </p>
+
+          <form id="contact-form" class="space-y-5">
+            <!-- Name + Phone -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <input
+                  id="name"
+                  name="user_name"
+                  type="text"
+                  placeholder="Your Name"
+                  class="form-input" />
+                <div class="form-error hidden" id="error-name">Please enter your name</div>
+              </div>
+
+              <div>
+                <input name="phone" type="tel" placeholder="Phone Number" class="form-input" />
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div>
+              <input
+                id="email"
+                name="user_email"
+                type="email"
+                placeholder="Email Address"
+                class="form-input" />
+              <div class="form-error hidden" id="error-email">Please enter your email</div>
+            </div>
+
+            <!-- Subject -->
+            <div>
+              <select id="subject" name="subject" class="form-input form-select">
+                <option value="">Select Subject</option>
+                <option value="leasing">Leasing / Financing Assistance</option>
+                <option value="vehicle-selection">Vehicle Selection</option>
+                <option value="leasing-guidance">Leasing / Financing Options Guidance</option>
+                <option value="auction">Auction Vehicle Sourcing</option>
+                <option value="consulting">Vehicle Consulting</option>
+                <option value="rental">Car Rental</option>
+                <option value="other">Other Inquiry</option>
+              </select>
+              <div class="form-error hidden" id="error-subject">Please select a subject</div>
+            </div>
+
+            <!-- Message -->
+            <div>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Your Message..."
+                class="form-input form-textarea"></textarea>
+              <div class="form-error hidden" id="error-message">Please enter your message</div>
+            </div>
+
+            <!-- Date -->
+            <input type="hidden" name="date_time" />
+
+            <!-- Button -->
+            <div class="flex justify-center">
+              <button type="submit" class="btn-primary">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
