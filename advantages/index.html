@@ -5,19 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Learn more about LA Autostore, our experience in car leasing, financing, and helping clients find the perfect vehicle." />
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="img/favicon32x32.png" type="image/png" sizes="32x32" />
-    <link rel="icon" href="img/favicon16x16.png" type="image/png" sizes="16x16" />
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" sizes="180x180" />
-    <title>LA Autostore | About Us</title>
+      content="Why choose LA Autostore? Discover our advantages, expertise, and trusted partnerships in car leasing and vehicle sourcing." />
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/img/favicon32x32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/img/favicon16x16.png" type="image/png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" sizes="180x180" />
+    <title>LA Autostore | Advantages</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="css/output.css" />
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="/css/output.css" />
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="https://unpkg.com/lucide@latest" defer></script>
-    <script type="module" src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script type="module" src="/js/main.js"></script>
   </head>
   <body class="bg-white text-white overflow-x-hidden">
     <!-- Navigation -->
@@ -27,7 +35,7 @@
           <!-- Logo -->
           <div class="flex-shrink-0 flex items-center logo_container">
             <a href="/" class="flex items-baseline">
-              <img src="img/logo_autostore.webp" alt="logo" class="h-8 w-auto" />
+              <img src="/img/logo_autostore.webp" alt="logo" class="h-8 w-auto" />
             </a>
           </div>
 
@@ -59,27 +67,27 @@
             <nav
               class="hidden md:flex justify-center items-center gap-4 header-bottom__bar_container">
               <a
-                href="lease-offers.html"
+                href="/leaseOffers"
                 class="text-base font-medium tracking-wide text-gray-300 hover:text-[var(--primary-hover)] transition uppercase"
                 >Lease Offers
               </a>
               <a
-                href="creditapp.html"
+                href="/creditApplication"
                 class="text-base font-medium tracking-wide text-gray-300 hover:text-[var(--primary-hover)] transition uppercase"
                 >Credit Application
               </a>
               <a
-                href="services.html"
+                href="/services"
                 class="text-base font-medium tracking-wide text-gray-300 hover:text-[var(--primary-hover)] transition uppercase"
                 >Services
               </a>
               <a
-                href="advantages.html"
+                href="/advantages"
                 class="text-base font-medium tracking-wide text-gray-300 hover:text-[var(--primary-hover)] transition uppercase"
                 >Advantages
               </a>
               <a
-                href="aboutUs.html"
+                href="/about"
                 class="text-base font-medium tracking-wide text-gray-300 hover:text-[var(--primary-hover)] transition uppercase"
                 >About Us
               </a>
@@ -107,27 +115,27 @@
       <div id="mobile-menu" class="hidden md:hidden bg-dark-secondary border-t border-gray-800">
         <div class="px-4 pt-2 pb-4 space-y-1">
           <a
-            href="lease-offers.html"
+            href="/leaseOffers"
             class="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800"
             >Lease Offers</a
           >
           <a
-            href="creditapp.html"
+            href="/creditApplication"
             class="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800"
             >Credit Application</a
           >
           <a
-            href="services.html"
+            href="/services"
             class="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800"
             >Services</a
           >
           <a
-            href="advantages.html"
+            href="/advantages"
             class="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800"
             >Advantages</a
           >
           <a
-            href="aboutUs.html"
+            href="/about"
             class="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800"
             >About Us</a
           >
@@ -147,16 +155,16 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-dark text-white" id="aboutUs">
+    <section class="bg-dark text-white" id="advantages">
       <!-- IMAGE BLOCK -->
       <div class="relative h-[53vh] min-h-[500px] overflow-hidden image_container">
         <img
-          src="img/about.webp"
-          alt="about_us-img"
+          src="/img/advantages-img.webp"
+          alt="advantages"
           class="absolute inset-0 w-full h-full object-cover" />
 
         <!-- Dark overlay -->
-        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="absolute inset-0 bg-black/60"></div>
 
         <!-- Title on image -->
         <div class="absolute inset-0 z-10 flex items-start">
@@ -165,11 +173,11 @@
             <div class="text-xs text-gray-400 mb-3">
               <a href="/" class="hover:text-[var(--primary-hover)] transition">Home</a>
               <span class="mx-2 text-primary">/</span>
-              <span class="text-white">About Us</span>
+              <span class="text-white">Advantages</span>
             </div>
 
             <h1 class="text-5xl md:text-5xl font-montserrat tracking-wide font-bold">
-              <span class="inline-block">About Us</span>
+              <span class="inline-block">Advantages</span>
             </h1>
 
             <div class="w-16 h-[2px] bg-primary mt-4"></div>
@@ -178,42 +186,120 @@
       </div>
 
       <!-- CONTENT BLOCK -->
-      <div class="max-w-7xl mx-auto px-6 py-14 text-center">
-        <h2 class="text-3xl text-gray-300 mb-10 font-bold">About Us</h2>
+      <div class="max-w-7xl mx-auto px-6 py-14">
+        <h2 class="text-2xl text-gray-300 mb-12 font-normal text-center">
+          Become our client and enjoy the service of premium class:
+        </h2>
 
-        <div class="space-y-6 text-gray-300 leading-relaxed text-sm md:text-base text-left">
-          <p>
-            <strong>LA Autostore</strong> is a company focused on helping clients obtain vehicles
-            through flexible leasing solutions. Our goal is to make the process of getting a car
-            simple, transparent, and convenient for every customer.
-          </p>
+        <ul class="space-y-10">
+          <!-- Item -->
+          <li class="flex gap-6 items-start">
+            <div
+              class="relative w-16 h-16 border border-primary flex-shrink-0 list_number_container">
+              <span class="absolute top-1 right-2 text-white font-bold text-lg list_number">
+                01
+              </span>
+            </div>
+            <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+              We understand the automotive market and work with trusted brands and partners, helping
+              our clients choose reliable vehicles with favorable leasing conditions.
+            </p>
+          </li>
 
-          <p>
-            Our company has been operating since <strong>2010</strong>, building a strong reputation
-            in the Los Angeles automotive market. Over the years we have helped hundreds of
-            customers find the right vehicle that meets their needs, lifestyle, and budget.
-          </p>
+          <li class="flex gap-6 items-start">
+            <div
+              class="relative w-16 h-16 border border-primary flex-shrink-0 list_number_container">
+              <span class="absolute top-1 right-2 text-white font-bold text-lg list_number"
+                >02</span
+              >
+            </div>
+            <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+              Our team helps clients navigate leasing programs and select the most suitable
+              financial terms based on their needs and budget.
+            </p>
+          </li>
 
-          <p>
-            We work directly with private clients, offering a professional and transparent car
-            leasing experience. Our team carefully selects vehicles that meet high standards of
-            quality, performance, and reliability.
-          </p>
+          <li class="flex gap-6 items-start">
+            <div
+              class="relative w-16 h-16 border border-primary flex-shrink-0 list_number_container">
+              <span class="absolute top-1 right-2 text-white font-bold text-lg list_number"
+                >03</span
+              >
+            </div>
+            <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+              We assist in selecting the right vehicle for you, comparing models, specifications,
+              and pricing to ensure the best value.
+            </p>
+          </li>
 
-          <p>
-            LA Autostore is located in <strong>Woodland Hills, CA 91364</strong>, at
-            <strong>21146 Ventura Blvd Suite 3</strong>. From this location, we proudly serve
-            customers throughout Los Angeles and the surrounding areas.
-          </p>
+          <li class="flex gap-6 items-start">
+            <div
+              class="relative w-16 h-16 border border-primary flex-shrink-0 list_number_container">
+              <span class="absolute top-1 right-2 text-white font-bold text-lg list_number"
+                >04</span
+              >
+            </div>
+            <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+              Share your requirements with us and we will arrange the vehicle you need. If the exact
+              model is unavailable, we will offer a comparable alternative.
+            </p>
+          </li>
 
-          <p>
-            Our mission is simple — to help every client find the perfect car while providing honest
-            advice, professional support, and an enjoyable experience.
-          </p>
+          <li class="flex gap-6 items-start">
+            <div
+              class="relative w-16 h-16 border border-primary flex-shrink-0 list_number_container">
+              <span class="absolute top-1 right-2 text-white font-bold text-lg list_number"
+                >05</span
+              >
+            </div>
+            <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+              Our priority is building long-term relationships with clients by providing transparent
+              service and individual attention to every request.
+            </p>
+          </li>
+        </ul>
+
+        <div class="mt-10 text-center">
+          <a href="/leaseOffers" class="btn-primary">Choose Your Car</a>
         </div>
+      </div>
+    </section>
 
-        <div class="mt-10 mb-14">
-          <a href="lease-offers.html" class="btn-primary">View offers</a>
+    <!-- Gallery Section -->
+    <section class="bg-white py-16 section_gallery">
+      <div class="max-w-[79rem] mx-auto px-4">
+        <h2 class="text-3xl font-montserrat font-bold text-center text-black mb-10">
+          Our Clients Vehicles
+        </h2>
+
+        <div class="owl-carousel client-gallery">
+          <div class="gallery-item">
+            <img src="/img/clientsCars/clientcar1.webp" alt="client-car-1" />
+          </div>
+          <div class="gallery-item">
+            <img src="/img/clientsCars/clientcar2.webp" alt="client-car-2" />
+          </div>
+          <div class="gallery-item">
+            <img src="/img/clientsCars/clientcar3.webp" alt="client-car-3" />
+          </div>
+          <div class="gallery-item">
+            <img src="/img/clientsCars/clientcar4.webp" alt="client-car-4" />
+          </div>
+          <div class="gallery-item">
+            <img src="/img/clientsCars/clientcar5.webp" alt="client-car-5" />
+          </div>
+          <div class="gallery-item">
+            <img src="/img/clientsCars/clientcar6.webp" alt="client-car-6" />
+          </div>
+          <div class="gallery-item">
+            <img src="/img/clientsCars/clientcar7.webp" alt="client-car-7" />
+          </div>
+          <div class="gallery-item">
+            <img src="/img/clientsCars/clientcar8.webp" alt="client-car-8" />
+          </div>
+          <div class="gallery-item">
+            <img src="/img/clientsCars/clientcar9.webp" alt="client-car-9" />
+          </div>
         </div>
       </div>
     </section>
@@ -241,7 +327,7 @@
           <div class="bg-dark-secondary p-6 border border-gray-800 delay-100">
             <div class="flex items-start gap-4 h-full">
               <img
-                src="img/reviews/av1.jpg"
+                src="/img/reviews/av1.jpg"
                 alt="Customer"
                 class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
               <div class="flex-1 flex flex-col justify-between h-full">
@@ -277,7 +363,7 @@
           <div class="bg-dark-secondary p-6 border border-gray-800 delay-100">
             <div class="flex items-start gap-4 h-full">
               <img
-                src="img/reviews/av2.jpg"
+                src="/img/reviews/av2.jpg"
                 alt="Customer"
                 class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
               <div class="flex-1 flex flex-col justify-between h-full">
@@ -312,7 +398,7 @@
           <div class="bg-dark-secondary p-6 border border-gray-800 delay-100">
             <div class="flex items-start gap-4 h-full">
               <img
-                src="img/reviews/av3.jpg"
+                src="/img/reviews/av3.jpg"
                 alt="Customer"
                 class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
               <div class="flex-1 flex flex-col justify-between h-full">
@@ -348,7 +434,7 @@
           <div class="bg-dark-secondary p-6 border border-gray-800 delay-100">
             <div class="flex items-start gap-4 h-full">
               <img
-                src="img/reviews/av4.jpg"
+                src="/img/reviews/av4.jpg"
                 alt="Customer"
                 class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
               <div class="flex-1 flex flex-col justify-between h-full">
@@ -404,7 +490,7 @@
       <!-- Background Image -->
       <div class="absolute inset-0 z-0 opacity-80">
         <img
-          src="img/contacts-img.webp"
+          src="/img/contacts-img.webp"
           alt="contact-section-background"
           class="w-full h-full object-cover" />
       </div>
@@ -525,26 +611,24 @@
           <!-- Logo -->
           <div class="flex-shrink-0 flex items-center logo_container">
             <a href="/" class="flex items-baseline">
-              <img src="img/logo_autostore.webp" alt="logo" class="h-8 w-auto" />
+              <img src="/img/logo_autostore.webp" alt="logo" class="h-8 w-auto" />
             </a>
           </div>
 
           <!-- Nav -->
           <div
             class="flex gap-6 text-xs text-gray-300 uppercase tracking-wider footer-nav_container">
-            <a href="lease-offers.html" class="hover:text-[var(--primary-hover)] transition">
+            <a href="/leaseOffers" class="hover:text-[var(--primary-hover)] transition">
               Lease Offers
             </a>
-            <a href="creditapp.html" class="hover:text-[var(--primary-hover)] transition">
+            <a href="/creditApplication" class="hover:text-[var(--primary-hover)] transition">
               Credit Application
             </a>
-            <a href="services.html" class="hover:text-[var(--primary-hover)] transition">
-              Services
-            </a>
-            <a href="advantages.html" class="hover:text-[var(--primary-hover)] transition">
+            <a href="/services" class="hover:text-[var(--primary-hover)] transition"> Services </a>
+            <a href="/advantages" class="hover:text-[var(--primary-hover)] transition">
               Advantages
             </a>
-            <a href="aboutUs.html" class="hover:text-[var(--primary-hover)] transition">About us</a>
+            <a href="/about" class="hover:text-[var(--primary-hover)] transition">About us</a>
             <a href="#contacts" class="hover:text-[var(--primary-hover)] transition">Contacts</a>
             <a href="privacy.html" class="hover:text-[var(--primary-hover)] transition">
               Privacy Policy

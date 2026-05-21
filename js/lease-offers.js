@@ -29,7 +29,8 @@ function renderCatalog(list) {
 
   list.forEach((car) => {
     const card = document.createElement('a');
-    card.href = `item.html?id=${car.id}`;
+    // card.href = `item.html?id=${car.id}`;
+    card.href = `/item/?id=${car.id}`;
     card.className = 'block catalog-item';
 
     card.innerHTML = `

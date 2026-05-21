@@ -219,7 +219,8 @@ function initSearchRedirect() {
     if (model) params.append('model', model);
     if (year) params.append('year', year);
 
-    const url = `lease-offers.html?${params.toString()}`;
+    // const url = `lease-offers.html?${params.toString()}`;
+    const url = `/leaseOffers/?${params.toString()}`;
 
     window.location.href = url;
   });
@@ -297,7 +298,9 @@ function renderLatetsOffers() {
   latestCars.forEach((car) => {
     const card = document.createElement('a');
 
-    card.href = `item.html?id=${car.id}`;
+    // card.href = `item.html?id=${car.id}`;
+
+    card.href = `/item/?id=${car.id}`;
 
     card.className = 'block';
 
