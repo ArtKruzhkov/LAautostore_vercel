@@ -5,33 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="LA Autostore - Professional car leasing, financing assistance, and vehicle sourcing in Los Angeles. Find the best deals on your next car with our expert team." />
-    <meta
-      name="keywords"
-      content="car leasing Los Angeles, auto financing, vehicle auction sourcing, car rental LA, auto broker, car deals California, LA Autostore" />
+      content="Learn more about LA Autostore, our experience in car leasing, financing, and helping clients find the perfect vehicle." />
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="img/favicon32x32.png" type="image/png" sizes="32x32" />
     <link rel="icon" href="img/favicon16x16.png" type="image/png" sizes="16x16" />
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png" sizes="180x180" />
-    <title>LA Autostore</title>
+    <title>LA Autostore | About Us</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="css/output.css" />
+    <link rel="stylesheet" href="/css/output.css" />
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
     <script src="https://unpkg.com/lucide@latest" defer></script>
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="/js/main.js"></script>
   </head>
   <body class="bg-white text-white overflow-x-hidden">
     <!-- Navigation -->
@@ -41,7 +27,7 @@
           <!-- Logo -->
           <div class="flex-shrink-0 flex items-center logo_container">
             <a href="/" class="flex items-baseline">
-              <img src="img/logo_autostore.webp" alt="logo" class="h-8 w-auto" />
+              <img src="/img/logo_autostore.webp" alt="logo" class="h-8 w-auto" />
             </a>
           </div>
 
@@ -161,198 +147,73 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative h-[53vh] min-h-[500px] flex items-end justify-center overflow-hidden">
-      <!-- Background Image -->
-      <div class="absolute inset-0 z-0">
+    <section class="bg-dark text-white" id="aboutUs">
+      <!-- IMAGE BLOCK -->
+      <div class="relative h-[53vh] min-h-[500px] overflow-hidden image_container">
         <img
-          src="img/main-img.webp"
-          alt="background-image_la-autostore"
-          class="w-full h-full object-cover" />
+          src="img/about.webp"
+          alt="about_us-img"
+          class="absolute inset-0 w-full h-full object-cover" />
+
+        <!-- Dark overlay -->
         <div class="absolute inset-0 bg-black/20"></div>
-        <div
-          class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-      </div>
 
-      <!-- Content -->
-      <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mb-20">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-light font-montserrat mb-4 text-white">
-          Find your <span class="font-bold">perfect car</span>
-        </h1>
-        <p class="text-gray-300 text-lg mb-8 font-light">
-          Professional leasing assistance and vehicle selection in Los Angeles
-        </p>
-      </div>
-    </section>
+        <!-- Title on image -->
+        <div class="absolute inset-0 z-10 flex items-start">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-10">
+            <!-- Breadcrumb -->
+            <div class="text-xs text-gray-400 mb-3">
+              <a href="/" class="hover:text-[var(--primary-hover)] transition">Home</a>
+              <span class="mx-2 text-primary">/</span>
+              <span class="text-white">About Us</span>
+            </div>
 
-    <!-- Search Box -->
-    <section class="search-section triangles-down w-full backdrop-blur-sm py-6 relative">
-      <div class="max-w-7xl mx-auto px-4 md:px-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="relative">
-            <label class="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Brand</label>
-            <select
-              id="brand-select"
-              class="w-full bg-dark-secondary border border-gray-700 text-white px-4 py-2.5 text-sm focus:outline-none focus:border-primary transition">
-              <option value="" selected>Select brand</option>
-            </select>
-          </div>
-          <div class="relative">
-            <label class="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Model</label>
-            <select
-              id="model-select"
-              class="w-full bg-dark-secondary border border-gray-700 text-white px-4 py-2.5 text-sm focus:outline-none focus:border-primary transition">
-              <option value="" selected>Choose a model</option>
-            </select>
-          </div>
-          <div class="relative">
-            <label class="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Year</label>
-            <select
-              id="year-select"
-              class="w-full bg-dark-secondary border border-gray-700 text-white px-4 py-2.5 text-sm focus:outline-none focus:border-primary transition">
-              <option value="" selected>Year of model</option>
-            </select>
-          </div>
-        </div>
-        <div class="mt-6 flex justify-center">
-          <button
-            id="search-cars-btn"
-            class="bg-primary text-white px-8 py-3 text-sm font-medium uppercase tracking-wider hover:bg-primary-hover transition flex items-center gap-2">
-            <i data-lucide="search" class="w-4 h-4"></i>
-            Search Cars
-          </button>
-        </div>
-      </div>
-    </section>
+            <h1 class="text-5xl md:text-5xl font-montserrat tracking-wide font-bold">
+              <span class="inline-block">About Us</span>
+            </h1>
 
-    <!-- Stats Section -->
-    <section class="stats-section py-12 px-4 bg-white">
-      <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="text-center delay-100">
-          <div
-            class="text-4xl md:text-5xl font-bold font-montserrat text-black mb-1 counter"
-            data-target="16">
-            0
-          </div>
-          <div class="text-xs text-gray-400 uppercase tracking-wider">
-            More than 16<br />years in the market
-          </div>
-        </div>
-        <div class="text-center delay-200">
-          <div
-            class="text-4xl md:text-5xl font-bold font-montserrat text-black mb-1 counter"
-            data-target="20">
-            0
-          </div>
-          <div class="text-xs text-gray-400 uppercase tracking-wider">
-            We work with 20+ car brands<br />
-            arranging leasing & financing
-          </div>
-        </div>
-        <div class="text-center delay-300">
-          <div
-            class="text-4xl md:text-5xl font-bold font-montserrat text-black mb-1 counter"
-            data-target="10">
-            0
-          </div>
-          <div class="text-xs text-gray-400 uppercase tracking-wider">
-            Sourcing vehicles from 10+<br />auto auctions across CA
-          </div>
-        </div>
-        <div class="text-center delay-400">
-          <div
-            class="text-4xl md:text-5xl font-bold font-montserrat text-black mb-1 counter"
-            data-target="24">
-            0
-          </div>
-          <div class="text-xs text-gray-400 uppercase tracking-wider">
-            Fast approvals<br />within 24 hours
+            <div class="w-16 h-[2px] bg-primary mt-4"></div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-12 px-4 bg-white text-center">
-      <div class="max-w-4xl mx-auto header_about_container">
-        <h2 class="text-3xl md:text-4xl font-montserrat text-black mb-4">
-          <span class="font-bold">LA</span> autostore provides<br />
-          <span class="font-light">modern leasing solutions and vehicle sourcing.</span>
-        </h2>
-        <div class="w-12 h-0.5 bg-gray-600 mx-auto my-6"></div>
-        <p class="text-gray-400 text-sm leading-relaxed mb-2">
-          We help our clients find the right car, arranging leasing options, and finding vehicles
-          based on their request.
-        </p>
-        <p class="text-gray-400 text-sm leading-relaxed mb-2">
-          From vehicle selection to leasing guidance — our team supports you throughout the entire
-          process.
-        </p>
-        <p class="text-gray-500 text-xs italic mt-6">"Your next car starts here."</p>
-      </div>
-    </section>
+      <!-- CONTENT BLOCK -->
+      <div class="max-w-7xl mx-auto px-6 py-14 text-center">
+        <h2 class="text-3xl text-gray-300 mb-10 font-bold">About Us</h2>
 
-    <!-- Latest Offers Section -->
-    <section id="last-offers" class="py-10 px-4 bg-white reveal">
-      <div class="max-w-7xl mx-auto">
-        <!-- Section Header -->
-        <div class="flex flex-col md:flex-row justify-center items-start items-center mb-8 gap-4">
-          <div class="text-center">
-            <h3 class="text-4xl font-montserrat font-bold text-black mb-2">Latest offers</h3>
-            <p class="text-xs text-gray-400">Recently added vehicles.</p>
-          </div>
+        <div class="space-y-6 text-gray-300 leading-relaxed text-sm md:text-base text-left">
+          <p>
+            <strong>LA Autostore</strong> is a company focused on helping clients obtain vehicles
+            through flexible leasing solutions. Our goal is to make the process of getting a car
+            simple, transparent, and convenient for every customer.
+          </p>
+
+          <p>
+            Our company has been operating since <strong>2010</strong>, building a strong reputation
+            in the Los Angeles automotive market. Over the years we have helped hundreds of
+            customers find the right vehicle that meets their needs, lifestyle, and budget.
+          </p>
+
+          <p>
+            We work directly with private clients, offering a professional and transparent car
+            leasing experience. Our team carefully selects vehicles that meet high standards of
+            quality, performance, and reliability.
+          </p>
+
+          <p>
+            LA Autostore is located in <strong>Woodland Hills, CA 91364</strong>, at
+            <strong>21146 Ventura Blvd Suite 3</strong>. From this location, we proudly serve
+            customers throughout Los Angeles and the surrounding areas.
+          </p>
+
+          <p>
+            Our mission is simple — to help every client find the perfect car while providing honest
+            advice, professional support, and an enjoyable experience.
+          </p>
         </div>
 
-        <!-- Car Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="car-grid">
-          <!-- Cars Will be rendered here -->
-        </div>
-
-        <!-- View All Button -->
-        <div class="text-center mt-12">
-          <a
-            href="lease-offers.html"
-            class="inline-block border border-gray-600 text-red-600 px-8 py-3 text-xs font-medium uppercase tracking-wider hover:bg-red-600 hover:border-red-600 hover:text-white transition">
-            All Cars
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="bg-white py-12 section_gallery section_gallery-main">
-      <div class="max-w-[79rem] mx-auto px-4">
-        <h2 class="text-3xl font-montserrat font-bold text-center text-black mb-10">
-          Our Clients Vehicles
-        </h2>
-
-        <div class="owl-carousel client-gallery">
-          <div class="gallery-item">
-            <img src="img/clientsCars/clientcar1.webp" alt="client-car-1" />
-          </div>
-          <div class="gallery-item">
-            <img src="img/clientsCars/clientcar2.webp" alt="client-car-2" />
-          </div>
-          <div class="gallery-item">
-            <img src="img/clientsCars/clientcar3.webp" alt="client-car-3" />
-          </div>
-          <div class="gallery-item">
-            <img src="img/clientsCars/clientcar4.webp" alt="client-car-4" />
-          </div>
-          <div class="gallery-item">
-            <img src="img/clientsCars/clientcar5.webp" alt="client-car-5" />
-          </div>
-          <div class="gallery-item">
-            <img src="img/clientsCars/clientcar6.webp" alt="client-car-6" />
-          </div>
-          <div class="gallery-item">
-            <img src="img/clientsCars/clientcar7.webp" alt="client-car-7" />
-          </div>
-          <div class="gallery-item">
-            <img src="img/clientsCars/clientcar8.webp" alt="client-car-8" />
-          </div>
-          <div class="gallery-item">
-            <img src="img/clientsCars/clientcar9.webp" alt="client-car-9" />
-          </div>
+        <div class="mt-10 mb-14">
+          <a href="lease-offers.html" class="btn-primary">View offers</a>
         </div>
       </div>
     </section>
@@ -380,7 +241,7 @@
           <div class="bg-dark-secondary p-6 border border-gray-800 delay-100">
             <div class="flex items-start gap-4 h-full">
               <img
-                src="img/reviews/av1.jpg"
+                src="/img/reviews/av1.jpg"
                 alt="Customer"
                 class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
               <div class="flex-1 flex flex-col justify-between h-full">
@@ -416,7 +277,7 @@
           <div class="bg-dark-secondary p-6 border border-gray-800 delay-100">
             <div class="flex items-start gap-4 h-full">
               <img
-                src="img/reviews/av2.jpg"
+                src="/img/reviews/av2.jpg"
                 alt="Customer"
                 class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
               <div class="flex-1 flex flex-col justify-between h-full">
@@ -451,7 +312,7 @@
           <div class="bg-dark-secondary p-6 border border-gray-800 delay-100">
             <div class="flex items-start gap-4 h-full">
               <img
-                src="img/reviews/av3.jpg"
+                src="/img/reviews/av3.jpg"
                 alt="Customer"
                 class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
               <div class="flex-1 flex flex-col justify-between h-full">
@@ -487,7 +348,7 @@
           <div class="bg-dark-secondary p-6 border border-gray-800 delay-100">
             <div class="flex items-start gap-4 h-full">
               <img
-                src="img/reviews/av4.jpg"
+                src="/img/reviews/av4.jpg"
                 alt="Customer"
                 class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
               <div class="flex-1 flex flex-col justify-between h-full">
@@ -543,7 +404,7 @@
       <!-- Background Image -->
       <div class="absolute inset-0 z-0 opacity-80">
         <img
-          src="img/contacts-img.webp"
+          src="/img/contacts-img.webp"
           alt="contact-section-background"
           class="w-full h-full object-cover" />
       </div>
@@ -633,7 +494,7 @@
           <!-- Google Maps Placeholder -->
           <div class="contact-section-map_container">
             <div
-              class="group reveal delay-200 relative max-w-[28rem] min-h-[400px] border border-gray-800 rounded-lg">
+              class="group reveal delay-200 relative w-[28rem] min-h-[400px] border border-gray-800 rounded-lg">
               <!-- Google Map -->
               <iframe
                 src="https://www.google.com/maps?q=LA+AUTOSTORE,+21146+Ventura+Blvd+Suite+3,+Woodland+Hills,+CA+91364,+United+States&output=embed"
